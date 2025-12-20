@@ -1,0 +1,21 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public class Code11_07 {
+
+	public static void main(String[] args) throws Exception{
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new FileReader("C:/jdk/HelloJava/Chapter11/src/text1.txt"));
+		
+		String inStr;
+		int count=1;
+		while(true) {
+			inStr=br.readLine();
+			if(inStr==null)
+				break;
+			System.out.printf("%d : %s",count,inStr);
+			count++;
+		}
+	}
+
+}

@@ -1,0 +1,20 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class Code11_08 {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		BufferedReader br = new BufferedReader(new FileReader("C:/jdk/HelloJava/Chapter11/src/text1.txt"));
+		BufferedWriter bw = new BufferedWriter(new FileWriter("C:/jdk/HelloJava/Chapter11/src/text2.txt"));
+		String copy;
+		while((copy=br.readLine())!=null) {
+			bw.write(copy+"\n");
+		}
+		bw.close();
+		System.out.println("---text1.txt가 text2.txt로 복사되었음---");
+	}
+
+}
